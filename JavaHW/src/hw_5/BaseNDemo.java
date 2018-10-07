@@ -8,7 +8,7 @@ public class BaseNDemo {
 	HashMap<String, BaseNumber> symbolTable = new HashMap<>();
 	Scanner sc = new Scanner(System.in);
 
-	void printSymbolBin(int base) {
+	void printSymbolBin() {
 		for (String a : symbolTable.keySet()) {
 			System.out.println(a + " : " + symbolTable.get(a));
 		}
@@ -16,12 +16,12 @@ public class BaseNDemo {
 
 	void doit() {
 		int c = 0;
-		System.out.print("Áø¼ö = ");
+		System.out.print("ì§„ìˆ˜ = ");
 		int base = sc.nextInt();
 		while (c <= 3) {
 			c = menu(base);
 		}
-		printSymbolBin(base);
+		printSymbolBin();
 	}
 
 	int menu(int base) {
@@ -29,7 +29,7 @@ public class BaseNDemo {
 		String a, b, c, op;
 		int n;
 		BaseNumber bn, bn2;
-		System.out.printf("%n(1) a = 5 (2) a = b (3) a = b + c (±âÅ¸) Á¾·á");
+		System.out.printf("%n(1) a = 5 (2) a = b (3) a = b + c (ê¸°íƒ€) ì¢…ë£Œ");
 		int m = sc.nextInt();
 		if (m == 1) {
 			System.out.printf("=> a = 5    ...");
