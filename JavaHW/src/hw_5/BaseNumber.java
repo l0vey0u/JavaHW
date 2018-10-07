@@ -19,7 +19,7 @@ public class BaseNumber implements Comparable<BaseNumber> {
 	public BaseNumber(ArrayList<Integer> repr, int base) {
 		this.repr = repr;
 		this.base = base;
-		this.n = this.toInt(repr);
+		this.n = this.toInt();
 	}
 
 	private void convert() {
@@ -34,10 +34,10 @@ public class BaseNumber implements Comparable<BaseNumber> {
 		}
 	}
 
-	private int toInt(ArrayList<Integer> repr) {
+	private int toInt() {
 		int v = 0;
 		int k = 0;
-		for (int i : repr) {
+		for (int i : this.repr) {
 			v += i * (int) Math.pow(this.base, k++);
 		}
 		return v;
